@@ -120,6 +120,7 @@
   <script>
     const panels=document.querySelectorAll('.panel');
     function toggleOpen(){
+     // panels.classList.removeClass('open open-active');
       this.classList.toggle('open');
     }
     function toggleActive(e){
@@ -127,8 +128,9 @@
         this.classList.toggle('open-active');
       }
     }
+    // toggle open
     panels.forEach(panel=>panel.addEventListener('click',toggleOpen));
-
+    // toggleactive 
     panels.forEach(panel=>panel.addEventListener('transitionend',toggleActive));
 
   </script>
