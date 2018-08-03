@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reference vs Copy</title>
+</head>
+<body>
+    <!--- Reference vs Copy -->
+<script>
+    var courseduration = 30;
+    var courseduration1 = courseduration;
+    console.log(courseduration,courseduration1);
+    courseduration = 50;
+    console.log(courseduration, courseduration1);
+
+    var coursetopics = ['html5','css3','javascript','jquery'];
+    var coursetopics2 = coursetopics;
+    console.log(coursetopics);
+    console.log(coursetopics2);
+    console.log("************");
+    coursetopics[3] = "Angular";
+    console.log(coursetopics);
+    console.log(coursetopics2);
+
+    let coursefeedback ={
+        studentname:"venkat",
+        number:12,
+        feedback:"good"
+    }
+
+   let coursefeedback2 = coursefeedback;
+   console.log(coursefeedback2);
+   console.log(coursefeedback);
+   coursefeedback.number = 9;
+   console.log(coursefeedback);
+   console.log(coursefeedback2);
+
+   coursefeedback3 = Object.assign({},coursefeedback,{number:33} );
+
+   console.log(coursefeedback);
+   console.log(coursefeedback3);
+
+</script>
+
+
+    
+</body>
+</html>
